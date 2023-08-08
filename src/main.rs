@@ -83,6 +83,9 @@ fn main() {
             s_num: second_num,
             op: Operations::Division,
         });
+    } else if choice == 6 {
+        let tuple_demo: (i64, f64) = (first_num as i64, second_num as f64);
+        res = find_remainder(tuple_demo);
     } else {
         println!("Invalid Choice Entered!")
     }
@@ -108,4 +111,6 @@ fn find_mean(val: Vec<i32>) -> f32 {
     (sum / val.len()) as f32
 }
 
-fn find_remainder() {}
+fn find_remainder(data: (i64, f64)) -> f32 {
+    data.0 % data.1 as f32
+}
